@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background: url('https://source.unsplash.com/1600x900/?nature,dream') no-repeat center center/cover; /* Replace with a URL to your preferred photo */
+            background: linear-gradient(135deg, #5f27cd, #341f97); /* Rich purple gradient */
             color: #fff;
             display: flex;
             justify-content: center;
@@ -19,41 +19,40 @@
         }
         .container {
             text-align: center;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            max-width: 800px;
-            color: #eee;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
         }
         .container h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: #ff9ff3; /* Dreamy pink color */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            color: #5f27cd; /* Bright purple */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
         .container p {
             font-size: 1.2rem;
             margin-bottom: 20px;
+            color: #555;
             font-weight: 500;
         }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+        .container a {
+            display: inline-block;
+            padding: 12px 25px;
             margin-top: 20px;
+            text-decoration: none;
+            background: #341f97;
+            color: #fff;
+            border-radius: 50px;
+            font-size: 1rem;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
-        .gallery img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        .container a:hover {
+            background: #5f27cd; /* Brighter purple on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
         footer {
             position: absolute;
@@ -67,19 +66,12 @@
 
     <div class="container">
         <h1>Welcome to Devi's World</h1>
-        <p>A magical place filled with vibrant moments, creativity, and dreams.</p>
-        <div class="gallery">
-            <img src="https://source.unsplash.com/150x150/?forest" alt="Forest">
-            <img src="https://source.unsplash.com/150x150/?flowers" alt="Flowers">
-            <img src="https://source.unsplash.com/150x150/?mountains" alt="Mountains">
-            <img src="https://source.unsplash.com/150x150/?ocean" alt="Ocean">
-            <img src="https://source.unsplash.com/150x150/?stars" alt="Stars">
-            <img src="https://source.unsplash.com/150x150/?sunrise" alt="Sunrise">
-        </div>
+        <p>A magical place where dreams come alive and creativity knows no bounds.</p>
+        <a href="#">Enter the Magic</a>
     </div>
 
     <footer>
-        &copy; 2024 Devi's World | A place of endless wonder.
+        &copy; 2024 Devi's World | Crafted with ❤️ for dreamers.
     </footer>
 
 </body>
