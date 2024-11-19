@@ -3,62 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic HTML Page</title>
+    <title>Welcome, Sonika World</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
-        header {
-            background: #007BFF;
-            color: white;
-            padding: 10px;
+        .container {
             text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        .container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff6584;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .container p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .container a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #ff6584;
+            color: white;
+            border-radius: 50px;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .container a:hover {
+            background: #ff4066;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
         }
         footer {
-            background: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            border-top: 1px solid #ddd;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #007BFF;
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9rem;
+            color: #444;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Welcome to My Basic HTML Page</h1>
-</header>
+    <div class="container">
+        <h1>Welcome, Sonika World</h1>
+        <p>We are so delighted to have you here. You brighten up every space with your presence!</p>
+        <a href="#">Discover More</a>
+    </div>
 
-<nav>
-    <a href="#section1">Section 1</a>
-    <a href="#section2">Section 2</a>
-    <a href="#footer">Footer</a>
-</nav>
-
-<section id="section1">
-    <h2>Section 1</h2>
-    <p>This is the first section of the page. Add your content here.</p>
-</section>
-
-<section id="section2">
-    <h2>Section 2</h2>
-    <p>This is the second section of the page. You can add more sections as needed.</p>
-</section>
-
-<footer id="footer">
-    <p>&copy; 2024 My Website | All Rights Reserved</p>
-</footer>
+    <footer>
+        &copy; 2024 Designed with ❤️ for Sonika.
+    </footer>
 
 </body>
 </html>
