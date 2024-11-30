@@ -3,97 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devendra Reddy - Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Welcome Page - Devendra Reddy</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: linear-gradient(45deg, #ff6a00, #ee0979);
             color: white;
+            overflow: hidden;
+            text-align: center;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: -webkit-linear-gradient(#ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
             margin-top: 20px;
-            text-shadow: 0 0 10px #ff7e5f, 0 0 20px #feb47b;
         }
-        .chart-container {
-            width: 80%;
-            max-width: 600px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        canvas {
-            width: 100%;
-            height: 400px;
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 15px #ff7e5f, 0 0 30px #feb47b, 0 0 45px #ff7e5f;
+            }
+            100% {
+                text-shadow: 0 0 30px #ff7e5f, 0 0 60px #feb47b, 0 0 90px #ff7e5f;
+            }
         }
         footer {
-            margin-top: 20px;
-            color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            bottom: 10px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 <body>
-    <h1>Welcome, Devendra Reddy</h1>
-    <div class="chart-container">
-        <h2 style="text-align:center; color:#333;">Sales Data</h2>
-        <canvas id="salesChart"></canvas>
-    </div>
-    <div class="chart-container">
-        <h2 style="text-align:center; color:#333;">User Statistics</h2>
-        <canvas id="userChart"></canvas>
+    <div>
+        <h1>Devendra Reddy</h1>
+        <p>Welcome to my personal page!</p>
     </div>
     <footer>© 2024 Devendra Reddy</footer>
-    <script>
-        // Sales Chart
-        const salesCtx = document.getElementById('salesChart').getContext('2d');
-        const salesChart = new Chart(salesCtx, {
-            type: 'bar',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-                datasets: [{
-                    label: 'Sales (in USD)',
-                    data: [1200, 1900, 3000, 2500, 3200, 4000],
-                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'],
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                },
-            }
-        });
-
-        // User Statistics Chart
-        const userCtx = document.getElementById('userChart').getContext('2d');
-        const userChart = new Chart(userCtx, {
-            type: 'pie',
-            data: {
-                labels: ['Active Users', 'Inactive Users', 'New Users'],
-                datasets: [{
-                    data: [50, 30, 20],
-                    backgroundColor: ['#36A2EB', '#FFCE56', '#FF6384'],
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                },
-            }
-        });
-    </script>
 </body>
 </html>
