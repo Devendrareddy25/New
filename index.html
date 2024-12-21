@@ -1,58 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page - Devendra Reddy</title>
+    <title>A Special Message for Kavya</title>
     <style>
         body {
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(45deg, #ff6a00, #ee0979);
-            color: white;
-            overflow: hidden;
-            text-align: center;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #ffecd2);
+            animation: bg-gradient 8s infinite alternate;
+            overflow-x: hidden;
         }
-        h1 {
-            font-size: 4rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            background: -webkit-linear-gradient(#ff7e5f, #feb47b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 1.5s ease-in-out infinite alternate;
-        }
-        p {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-top: 20px;
-        }
-        @keyframes glow {
+
+        @keyframes bg-gradient {
             0% {
-                text-shadow: 0 0 15px #ff7e5f, 0 0 30px #feb47b, 0 0 45px #ff7e5f;
+                background-position: 0% 50%;
             }
+
             100% {
-                text-shadow: 0 0 30px #ff7e5f, 0 0 60px #feb47b, 0 0 90px #ff7e5f;
+                background-position: 100% 50%;
             }
         }
+
+        header {
+            background: linear-gradient(90deg, #ff6f61, #ff856c, #ffa37f, #ffcd94);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            animation: glow-header 3s infinite alternate;
+        }
+
+        @keyframes glow-header {
+            0% {
+                text-shadow: 0 0 15px #ff6f61, 0 0 30px #ffa37f;
+            }
+
+            100% {
+                text-shadow: 0 0 30px #ff856c, 0 0 40px #ffcd94;
+            }
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+        }
+
+        main {
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .photo-container {
+            margin: 30px 0;
+        }
+
+        .photo-container img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #ffcd94;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            animation: rotate 8s infinite linear;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .message {
+            font-size: 1.6rem;
+            margin: 30px 0;
+            line-height: 1.8;
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #ffa37f;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 500px;
+            display: inline-block;
+        }
+
+        .heart {
+            font-size: 3.5rem;
+            color: #ff5c8a;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
         footer {
-            position: absolute;
-            bottom: 10px;
+            margin-top: 30px;
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            color: #555;
+            animation: footer-glow 2s infinite alternate;
+        }
+
+        @keyframes footer-glow {
+            0% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .floating-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-stars span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0));
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: star-float 8s infinite ease-in-out;
+        }
+
+        @keyframes star-float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) translateX(30vw);
+                opacity: 0;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div>
-        <h1>Devendra Reddys</h1>
-        <p>Welcome to my devi's personal pages WELCOME to MY WORLD!HELLO VICKY</p>
+    <div class="floating-stars">
+        <span style="left: 10%; animation-duration: 6s;"></span>
+        <span style="left: 30%; animation-duration: 8s;"></span>
+        <span style="left: 50%; animation-duration: 7s;"></span>
+        <span style="left: 70%; animation-duration: 6.5s;"></span>
+        <span style="left: 90%; animation-duration: 5s;"></span>
     </div>
-    <footer>© 2024 Devendra Redde</footer>
+    <header>
+        <h1>A Special Message for Kavya <br> Written by Duggempudi Kiran Kumar Reddy</h1>
+    </header>
+    <main>
+        <div class="photo-container">
+            <img src="C:\Users\deven\OneDrive\Desktop\kiran\kiran.jpg" alt="Kavya's Photo">
+        </div>
+        <div class="heart">💖</div>
+        <p class="message">
+            Dear Kavya, <br><br>
+            You have captured my heart and brightened my world in a way no one else could. <br>
+            Each day with you feels like a dream I never want to wake up from. <br><br>
+            I hope you know how special you are to me. <br>
+            You mean more than words can express, and my heart is filled with love for you. 💕
+        </p>
+        <div class="heart">💖</div>
+    </main>
+    <footer>
+        <p>With love and affection, <br> Kiran Kumar Reddy ❤️</p>
+    </footer>
 </body>
+
 </html>
